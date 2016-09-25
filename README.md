@@ -1,7 +1,7 @@
 # GradeProgressView
 a progress view used to grade mobiles phone
 
-
+https://github.com/niniloveyou/GradeProgressView/gradeProgressView.gif
 
 #System Requirement
 
