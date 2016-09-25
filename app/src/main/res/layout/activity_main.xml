@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@android:color/holo_green_dark"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <deadline.grade.GradeProgressView
+        android:id="@+id/gradeProgressView"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="260dp"
+        android:layout_height="260dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="please input the progress"
+        android:id="@+id/et"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set progress"
+        android:id="@+id/bt"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>
