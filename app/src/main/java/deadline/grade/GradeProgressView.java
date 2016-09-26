@@ -12,6 +12,7 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.support.annotation.IntRange;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
@@ -59,8 +60,6 @@ public class GradeProgressView extends View {
     private Paint mInnerCirclePaint;
     private Paint mPointerPaint;
     private Path  mPointerPath;
-//    private Shader mShader;
-//    private Matrix mMatrix;
 
     private float centerX;
     private float centerY;
@@ -92,7 +91,6 @@ public class GradeProgressView extends View {
 
         mRectF = new RectF();
         mOuterRectF = new RectF();
-       // mMatrix = new Matrix();
 
         mOuterPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mOuterPaint.setStrokeWidth(outLineWidth);
@@ -149,15 +147,6 @@ public class GradeProgressView extends View {
         mPointerPath.lineTo(mRectF.right - pointGap - lineWidth / 2, centerY);
         mPointerPath.lineTo(centerX + pointRadius, centerY - 7);
         mPointerPath.close();
-/*        mShader = new SweepGradient(
-                centerX,
-                centerY,
-                new int[]{mProgressColor, mBackgroundColor },
-                new float[]{1f, 330f / 360f});
-
-        mMatrix.setRotate(135, centerX, centerY);
-        mShader.setLocalMatrix(mMatrix);
-        mProgressPaint.setShader(mShader);*/
     }
 
     @Override
@@ -180,7 +169,7 @@ public class GradeProgressView extends View {
         canvas.drawCircle(centerX, centerY, pointRadius, mInnerCirclePaint);
 
         canvas.save();
-        canvas.rotate(135 + degree, centerX, centerY);//这两句一定不能写反顺序
+        canvas.rotate(135 + degree, centerX, centerY);
         canvas.drawPath(mPointerPath, mPointerPaint);
         canvas.restore();
     }
