@@ -8,7 +8,6 @@ a progress view used to grade mobiles phone
 Android API 11+， Because of the use of ValueAnimation， if you want use it on API 8, please use NineoldAndroids library in your project.
 
 #Usage
-Declare this view in your layout like below.
         
         gradeProgressView.setProgress(100);                 //without animation
         
